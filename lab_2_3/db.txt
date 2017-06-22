@@ -1,0 +1,6 @@
+- day: '13'
+  month: november
+  temperature: '+13'
+  weather: windy
+  wind: '13'
+  year: '2013'
