@@ -1,2 +1,0 @@
-# SoftwareArchitectureLab1
-
