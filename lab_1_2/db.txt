@@ -1,1 +1,52 @@
-[{"temperature": "4 - 0", "month": "april", "weather": "arsenal - dinamo", "year": "1995", "day": "20", "wind": "Arsenal - [win] // Dinamo - [lose]"}, {"temperature": "2 - 3", "month": "march", "weather": "ddw - dede", "year": "2012", "day": "11", "wind": "ececec"}]
+(lp0
+(dp1
+Vtemperature
+p2
+V4 - 0
+p3
+sVmonth
+p4
+Vapril
+p5
+sVweather
+p6
+Varsenal - dinamo
+p7
+sVyear
+p8
+V1995
+p9
+sVday
+p10
+V20
+p11
+sVwind
+p12
+VArsenal - [win] // Dinamo - [lose]
+p13
+sa(dp14
+Vtemperature
+p15
+V2 - 3
+p16
+sVmonth
+p17
+Vmarch
+p18
+sVweather
+p19
+Vddw - dede
+p20
+sVyear
+p21
+V2012
+p22
+sVday
+p23
+V11
+p24
+sVwind
+p25
+Vececec
+p26
+sa.

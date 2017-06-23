@@ -32,7 +32,7 @@ def Out_day(cal, y, m, d):
     for i in cal:
         if y == i['year'] and m == i['month'] and d == i['day']:
             print "\n-------------------------------\nAt ", y, m, d, \
-                "\n", i['weather'], i['temperature'], ' wimd', i['wind'], \
+                "\n", i['teams'], i['score'], ' total', i['total'], \
                 "\n--------------------------------"
             flag = 1
     if flag == 0:
@@ -48,7 +48,7 @@ def All_days(cal):
     print "\n----------------------------------"
     for i in cal:
         print i['year'],  i['month'], i['day']
-        print i['weather'], i['temperature'], i['wind']
+        print i['teams'], i['score'], i['totals']
         print "----------------------------------"
 
 

@@ -8,13 +8,13 @@ def find_el(cal, y, m, d):
     return None
 
 
-def add_el(cal, y, m, d, w, t, wind):
+def add_el(cal, year, month, day, teams, score, total):
     """Add element function.
     """
-    i = find_el(cal, y, m, d)
+    i = find_el(cal, year, month, day)
     if i is None:
-        day = {'year': y, 'day': d, 'month': m, 'weather': w,
-               'temperature': t, 'wind': wind}
+        day = {'year': year, 'day': day, 'month': month, 'teams': teams,
+               'score': score, 'total': total}
         cal.append(day)
     else:
         print '''This day not available. Please chose another date...'''
