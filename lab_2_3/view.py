@@ -34,5 +34,5 @@ class View:
         print "\n----------------------------------"
         for i in cal:
             print i['year'],  i['month'], i['day']
-            print i['weather'], i['temperature'], ' wimd', i['wind'], '(m/s)'
+            print i['weather'], i['temperature'], i['wind']
             print "----------------------------------"

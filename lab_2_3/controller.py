@@ -14,12 +14,10 @@ class Controller:
     def __mode(self):
         """Mode choice elements menu"""
         print "\nSelect:"
-        print " 1. Display all days"
-        print " 2. Find day"
-        print " 3. Add day"
-        print " 4. Delete day"
-        print " 5. Rewrite day"
-        print " 6. Average temperature per month"
+        print " 1. Display all games"
+        print " 2. Find game"
+        print " 3. Add game"
+        print " 4. Delete game"
         print "0. Exit"
 
         print "\nChoice: ",
@@ -39,9 +37,9 @@ class Controller:
 
     def __weath(self):
         """Enter weather, temperature and wimd"""
-        w = raw_input('weather: ')
-        t = raw_input('temperature: ')
-        wind = raw_input('wimd(m/s): ')
+        w = raw_input('teams: ')
+        t = raw_input('score: ')
+        wind = raw_input('total: ')
         return w, t, wind
 
     def __save_result(self):

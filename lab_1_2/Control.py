@@ -5,12 +5,10 @@ import In_out
 def mode():
     """Mode choice elements menu"""
     print "\nSelect:"
-    print " 1. Display all days"
-    print " 2. Find day"
-    print " 3. Add day"
-    print " 4. Delete day"
-    print " 5. Rewrite day"
-    print " 6. Average temperature per month"
+    print " 1. Show all games"
+    print " 2. Find game"
+    print " 3. Add game"
+    print " 4. Delete game"
     print "0. Exit"
 
     print "\nChoice: ",
@@ -32,15 +30,15 @@ def day():
 
 def weath():
     """Enter weather, temperature and wimd"""
-    w = raw_input('weather: ')
-    t = raw_input('temperature: ')
-    wind = raw_input('wimd(m/s): ')
+    w = raw_input('teams: ')
+    t = raw_input('score: ')
+    wind = raw_input('Totals("Team name" win/lose): ')
     return w, t, wind
 
 
 def selector(cal, a):
     "Select enter value in mode"
-    print "\nEnter year, month, day (example 2017 march 23):"
+    print "\nEnter year, month, day:      |example: 1995 april 20|"
     y, m, d = day()
     if In_out.check_date(y, m, d):
         if int(a) == 2:

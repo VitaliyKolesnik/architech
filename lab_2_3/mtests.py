@@ -38,21 +38,21 @@ class test_model_methods(unittest.TestCase):
         dt = self.md.find_el('2015', 'march', '8')
         self.assertEqual(dt, None)
 
-        self.md.setc([{'year':'2017', 'day':'8', 'month':'march', 'weather':'sunny', 'temperature':'+13', 'wind':'3'}])
+        self.md.setc([{'year':'2017', 'day':'8', 'month':'march', 'teams':'arsenal', 'score':'3-3', 'total':'draw'}])
         dt = self.md.find_el('2017', 'march', '8')
-        self.assertEqual(dt, {'temperature': '+13', 'month': 'march', 'weather': 'sunny', 'year': '2017', 'day': '8', 'wind': '3'})
+        self.assertEqual(dt, {'score': '3-3', 'month': 'march', 'teams': 'arsenal', 'year': '2017', 'day': '8', 'total': 'draw'})
 
     def test_add_el(self):
         self.md.setc([])
-        dt = [{'temperature': '+13', 'month': 'march', 'weather': 'sunny', 'year': '2016', 'day': '2', 'wind': '3'}]
+        dt = [{'score': '3-3', 'month': 'march', 'teams': 'arsenal', 'year': '2016', 'day': '2', 'total': 'draw'}]
         self.md.add_el('2016', 'march', '2', 'sunny', '+13', '3')
         self.assertEqual(dt, self.md.show())
         
-        self.md.add_el('2016', 'march', '2', 'sunny', '+13', '3')
+        self.md.add_el('2016', 'march', '2', 'arsenal', '3-3', 'draw')
         self.assertEqual(dt, self.md.show())
 
     def test_del_el(self):
-        self.md.setc([{'year':'2017', 'day':'2', 'month':'march', 'weather':'sunny','temperature':'+13', 'wind':'3'}])
+        self.md.setc([{'year':'2017', 'day':'2', 'month':'march', 'teams':'arsenal','score':'3-3', 'total':'draw'}])
         self.md.del_el("2017", "march", "2")
         self.assertEqual([], self.md.show())
         
@@ -68,8 +68,8 @@ class test_model_methods(unittest.TestCase):
         self.assertEqual(self.md.check_date('1996', 'oct'), False)
 
     def test_temp(self):
-        self.md.setc([{'year':'2017', 'day':'8', 'month':'march', 'weather':'sunny', 'temperature':'+13', 'wind':'3'},
-                      {'year':'2017', 'day':'13', 'month':'march', 'weather':'sunny', 'temperature':'+20', 'wind':'3'}])
+        self.md.setc([{'year':'2017', 'day':'8', 'month':'march', 'teams':'arsenal', 'score':'3-3', 'total':'draw'},
+                      {'year':'2017', 'day':'13', 'month':'march', 'teams':'arsenal', 'score':'3-3', 'total':'draw'}])
         self.assertEqual(self.md.temp('2017', 'march'), 16)
         self.assertEqual(self.md.temp('2016', 'april'), None)
 

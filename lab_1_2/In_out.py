@@ -36,41 +36,11 @@ def Out_day(cal, y, m, d):
                 "\n--------------------------------"
             flag = 1
     if flag == 0:
-        print "Day not found :( Didn\'t need people being told that the"
+        print "Day not found"
 
 
-def Temp(cal, y, m):
-    """Average temperature calculation function.
-
-    >>> cal = [{'year':'2017', 'day':'8', 'month':'march', 'weather':'sunny', 'temperature':'+13', 'wind':'3'}, {'year':'2017', 'day':'13', 'month':'march', 'weather':'sunny', 'temperature':'+20', 'wind':'3'}]
-    >>> Temp(cal, '2017', 'march')
-    16
-    >>> Temp(cal, '2016', 'april')
-    
-    """
-    t = d = 0
-    for i in cal:
-        if i['month'] == m and y == i['year']:
-            t += int(i['temperature'])
-            d += 1
-    if d != 0:
-        return (t/d)
-    else:
-        return None
 
 
-def Midl_temp(cal):
-    """Output function average temperature."""
-    print "Enter year, month (example 2017 march ):"
-    y = raw_input("Year = ")
-    m = raw_input("Month = ")
-    if check_date(y, m):
-        if Temp(cal, y, m) is not None:
-            print 'Average temperature in ', m, y, ' = ', Temp(cal, y, m)
-        else:
-            print "Data not available"
-    else:
-        print "Incorrect input date!"
 
 
 def All_days(cal):
@@ -78,7 +48,7 @@ def All_days(cal):
     print "\n----------------------------------"
     for i in cal:
         print i['year'],  i['month'], i['day']
-        print i['weather'], i['temperature'], ' wimd', i['wind'], '(m/s)'
+        print i['weather'], i['temperature'], i['wind']
         print "----------------------------------"
 
 

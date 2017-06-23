@@ -17,7 +17,7 @@ class ConnectionSQL:
         if base == "sqlite":
             path = "sqlite:" + os.path.abspath("data.db")
         elif base == "mysql":
-            path = "mysql://root:1111@127.0.0.1/vpdb"
+            path = "mysql://root:3306@localhost/vpdb"
         elif base == "postgresql":
             path = "mysql://test:www@127.0.0.1/sammy"
         else:
