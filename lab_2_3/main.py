@@ -7,3 +7,4 @@ def start(config, filename):
     md = model.Model(filename, config)
     ct = controller.Controller(md)
     ct.menu()
+start(".config", "db.txt")

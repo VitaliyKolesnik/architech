@@ -39,3 +39,4 @@ def start(config, file_name):
         fl.close()
         serialize.save(calendar, file_obj, new_tp)
     file_obj.close()
+start(".config", "db.txt")
