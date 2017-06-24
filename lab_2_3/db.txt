@@ -1,52 +1,12 @@
-(lp0
-(dp1
-S'temperature'
-p2
-S'3 - 4'
-p3
-sS'month'
-p4
-S'april'
-p5
-sS'weather'
-p6
-S'arsenal - dinamo'
-p7
-sS'year'
-p8
-S'2012'
-p9
-sS'day'
-p10
-S'21'
-p11
-sS'wind'
-p12
-S'arsenal - lose // dinamo - win'
-p13
-sa(dp14
-S'temperature'
-p15
-S'2 - 2'
-p16
-sS'month'
-p17
-S'march'
-p18
-sS'weather'
-p19
-S'MU - PSG'
-p20
-sS'year'
-p21
-S'1995'
-p22
-sS'day'
-p23
-S'11'
-p24
-sS'wind'
-p25
-S'draw'
-p26
-sa.
+- day: '21'
+  month: april
+  score: 3 - 4
+  teams: arsenal - dinamo
+  total: arsenal - lose // dinamo - win
+  year: '2012'
+- day: '11'
+  month: march
+  score: 2 - 2
+  teams: MU - PSG
+  total: draw
+  year: '1995'

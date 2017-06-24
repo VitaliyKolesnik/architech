@@ -46,12 +46,12 @@ class Model:
                 return i
         return None
 
-    def add_el(self, y, m, d, w, t, wind):
+    def add_el(self, y, m, d, teams, score, total):
         """Add element function."""
         i = self.find_el(y, m, d)
         if i is None:
-            day = {'year': y, 'day': d, 'month': m, 'weather': w,
-                   'temperature': t, 'wind': wind}
+            day = {'year': y, 'day': d, 'month': m, 'teams': teams,
+                   'score': score, 'total': total}
             self.__calendar.append(day)
         else:
             print '''Data occupied in calendar'''
@@ -80,15 +80,3 @@ class Model:
                    and int(d) <= days[months.index(m)]:
                     return True
         return False
-
-    def temp(self, y, m):
-        """Average temperature calculation function."""
-        t = d = 0
-        for i in self.__calendar:
-            if i['month'] == m and y == i['year']:
-                t += int(i['temperature'])
-                d += 1
-        if d != 0:
-            return (t/d)
-        else:
-            return None

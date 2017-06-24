@@ -48,7 +48,7 @@ def All_days(cal):
     print "\n----------------------------------"
     for i in cal:
         print i['year'],  i['month'], i['day']
-        print i['teams'], i['score'], i['totals']
+        print i['teams'], i['score'], i['total']
         print "----------------------------------"
 
 

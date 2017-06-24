@@ -21,10 +21,10 @@ def add_el(cal, year, month, day, teams, score, total):
     return cal
 
 
-def del_el(cal, y, m, d):
+def del_el(cal, year, month, day):
     """Delete element function
     """
-    i = find_el(cal, y, m, d)
+    i = find_el(cal, year, month, day)
     if i is None:
         print "This day is empty"
     else:

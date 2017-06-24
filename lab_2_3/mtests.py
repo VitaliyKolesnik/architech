@@ -67,11 +67,7 @@ class test_model_methods(unittest.TestCase):
         self.assertEqual(self.md.check_date('2134', 'april'), True)
         self.assertEqual(self.md.check_date('1996', 'oct'), False)
 
-    def test_temp(self):
-        self.md.setc([{'year':'2017', 'day':'8', 'month':'march', 'teams':'arsenal', 'score':'3-3', 'total':'draw'},
-                      {'year':'2017', 'day':'13', 'month':'march', 'teams':'arsenal', 'score':'3-3', 'total':'draw'}])
-        self.assertEqual(self.md.temp('2017', 'march'), 16)
-        self.assertEqual(self.md.temp('2016', 'april'), None)
+
 
 
         
